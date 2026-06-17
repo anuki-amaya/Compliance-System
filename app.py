@@ -167,6 +167,46 @@ button[aria-selected="true"] {
     background-color: #1f2a36 !important;
     color: white !important;
 }
+/* =========================
+   STREAMLIT DATAFRAME (MAIN FIX)
+   ========================= */
+
+/* Outer dataframe container */
+div[data-testid="stDataFrame"] {
+    background-color: #3e4c5e !important;
+    border-radius: 12px !important;
+    padding: 10px !important;
+}
+
+/* Table header */
+thead tr th {
+    background-color: #2f3b4a !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* Table cells */
+tbody tr td {
+    background-color: #3e4c5e !important;
+    color: white !important;
+    border-color: #2f3b4a !important;
+}
+
+/* Row hover effect */
+tbody tr:hover td {
+    background-color: #2f3b4a !important;
+}
+
+/* Grid lines */
+table {
+    border-collapse: collapse !important;
+}
+
+/* Fix weird white blocks inside dataframe */
+div[data-testid="stDataFrame"] * {
+    background-color: transparent !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 # SIDEBAR
