@@ -77,12 +77,17 @@ if page == "📊 Dashboard":
     st.markdown("""
     <style>
     .metric-card {
-        background-color: #111827;
+        background: linear-gradient(
+            135deg,
+            #1e3a8a,
+            #2563eb
+        );
         padding: 20px;
         border-radius: 15px;
         text-align: center;
-        border: 1px solid #1f2937;
+        border: none;
         margin-bottom: 10px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
     }
 
     .metric-title {
