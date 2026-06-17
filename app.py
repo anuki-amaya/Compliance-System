@@ -57,6 +57,51 @@ p, div, span, label {
     background-color: #374f82;
     color: white;
 }
+/* 🌟 Input fields (text box, dropdown, date picker) */
+input, textarea {
+    background-color: #3e4c5e !important;
+    border-radius: 8px !important;
+    border: 1px solid #E5E7EB !important;
+}
+
+/* 🌟 Select boxes */
+div[data-baseweb="select"] > div {
+    background-color: #3e4c5e !important;
+    border-radius: 8px !important;
+}
+
+/* 🌟 Form container look */
+section[data-testid="stForm"] {
+    background-color: #3e4c5e;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+}
+
+/* 🔥 Kill the internal input cursor completely */
+div[data-baseweb="select"] input {
+    opacity: 0 !important;
+    position: absolute !important;
+    pointer-events: none !important;
+    caret-color: transparent !important;
+}
+
+/* 🔥 Force select display to behave like a button */
+div[data-baseweb="select"] > div {
+    cursor: pointer !important;
+}
+
+/* 🔥 Remove focus outline that triggers text mode feel */
+div[data-baseweb="select"]:focus,
+div[data-baseweb="select"] *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 🔥 Extra: hide blinking caret container */
+div[data-baseweb="select"] div[role="combobox"] {
+    caret-color: transparent !important;
+}
 </style>
 """, unsafe_allow_html=True)
 # SIDEBAR
