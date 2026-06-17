@@ -22,22 +22,37 @@ st.markdown("""
     background-color: #111827;
 }
 
+/* ALL HEADINGS */
+h1, h2, h3 {
+    color: white !important;
+}
+
+/* GENERAL TEXT */
+p, div, span, label {
+    color: white !important;
+}
+
 /* SIDEBAR TEXT */
-[data-testid="stSidebar"] h1,
-[data-testid="stSidebar"] h2,
-[data-testid="stSidebar"] h3,
-[data-testid="stSidebar"] label,
-[data-testid="stSidebar"] p {
-    color: white;
+[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+/* METRICS */
+[data-testid="stMetricLabel"] {
+    color: #d1d5db !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: white !important;
 }
 
 </style>
 """, unsafe_allow_html=True)
-
 # SIDEBAR
 
 st.sidebar.markdown("""
 # 🛡️ Compliance System
+
 
 
 ---
@@ -261,7 +276,23 @@ if page == "📊 Dashboard":
             audit_chart,
             names="status",
             values="count",
-            hole=0.65
+            hole=0.65,
+            color_discrete_sequence=[
+                "#22c55e",
+                "#f59e0b",
+                "#ef4444"
+            ]
+        )
+
+        fig1.update_layout(
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(color="white"),
+            legend_font_color="white"
+        )
+
+        fig1.update_traces(
+            textfont_color="white"
         )
 
         st.plotly_chart(
@@ -288,7 +319,23 @@ if page == "📊 Dashboard":
             incident_chart,
             names="status",
             values="count",
-            hole=0.65
+            hole=0.65,
+            color_discrete_sequence=[
+                "#3b82f6",
+                "#f59e0b",
+                "#ef4444"
+            ]
+        )
+
+        fig2.update_layout(
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(color="white"),
+            legend_font_color="white"
+        )
+
+        fig2.update_traces(
+            textfont_color="white"
         )
 
         st.plotly_chart(
