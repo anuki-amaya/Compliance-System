@@ -12,14 +12,22 @@ st.set_page_config(
 st.markdown("""
 <style>
 
+/* MAIN APP BACKGROUND */
+.stApp {
+    background-color: #1f2937;
+}
+
+/* SIDEBAR */
 [data-testid="stSidebar"] {
     background-color: #111827;
 }
 
+/* SIDEBAR TEXT */
 [data-testid="stSidebar"] h1,
 [data-testid="stSidebar"] h2,
 [data-testid="stSidebar"] h3,
-[data-testid="stSidebar"] label {
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] p {
     color: white;
 }
 
