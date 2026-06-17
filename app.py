@@ -45,7 +45,18 @@ p, div, span, label {
 [data-testid="stMetricValue"] {
     color: white !important;
 }
+.stButton > button {
+    background-color: #192b52;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    border: none;
+}
 
+.stButton > button:hover {
+    background-color: #374f82;
+    color: white;
+}
 </style>
 """, unsafe_allow_html=True)
 # SIDEBAR
