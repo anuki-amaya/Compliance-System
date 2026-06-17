@@ -102,6 +102,71 @@ div[data-baseweb="select"] *:focus {
 div[data-baseweb="select"] div[role="combobox"] {
     caret-color: transparent !important;
 }
+/* =========================
+   FORCE DROPDOWN COLORS
+   ========================= */
+
+/* BaseWeb popover root */
+div[data-baseweb="popover"] {
+    background-color: #3e4c5e !important;
+    border: 1px solid #2f3b4a !important;
+    border-radius: 10px !important;
+}
+
+/* dropdown menu container */
+ul, div[role="listbox"] {
+    background-color: #3e4c5e !important;
+}
+
+/* dropdown options */
+li, div[role="option"] {
+    background-color: #3e4c5e !important;
+    color: white !important;
+}
+
+/* hover option */
+li:hover, div[role="option"]:hover {
+    background-color: #2f3b4a !important;
+    color: white !important;
+}
+
+/* selected option */
+div[aria-selected="true"] {
+    background-color: #1f2a36 !important;
+    color: white !important;
+}
+
+/* =========================
+   FORCE DATE PICKER
+   ========================= */
+
+/* calendar popup (IMPORTANT: BaseWeb uses this more reliably than role=dialog) */
+div[data-baseweb="calendar"] {
+    background-color: #3e4c5e !important;
+    border-radius: 12px !important;
+}
+
+/* calendar all text */
+div[data-baseweb="calendar"] * {
+    color: white !important;
+}
+
+/* calendar days */
+td, button[role="gridcell"] {
+    color: #3e4c5e !important;
+    background-color: transparent !important;
+}
+
+/* hover day */
+td:hover, button[role="gridcell"]:hover {
+    background-color: #2f3b4a !important;
+}
+
+/* selected day */
+button[aria-selected="true"] {
+    background-color: #1f2a36 !important;
+    color: white !important;
+}
 </style>
 """, unsafe_allow_html=True)
 # SIDEBAR
